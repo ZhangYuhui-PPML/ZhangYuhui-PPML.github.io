@@ -26,6 +26,6 @@ Projects
 
 Activity and Services
 ------
-PACT Artifact Evaluation Committee, PACT 2023.//
-TPC Member (TPC) for ICA3PP 2025.//
+PACT Artifact Evaluation Committee, PACT 2023.    
+TPC Member (TPC) for ICA3PP 2025.    
 TPC Member (TPC) for ICPADS 2025.
