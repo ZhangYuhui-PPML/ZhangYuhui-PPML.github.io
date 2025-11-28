@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-I an an Associate Professor at the [State Key Laboratory of Cyberspace Security Defense]([https://pages.github.com/](https://sklois.cn/), [Institute of Information Engineering, Chinese Academy of Sciences (CAS)](https://www.iie.ac.cn/).
+I an an Associate Professor at [the State Key Laboratory of Cyberspace Security Defense](https://sklois.cn/), [Institute of Information Engineering, Chinese Academy of Sciences (CAS)](https://www.iie.ac.cn/).
 
 Her main research interests include cutting-edge topics such as Federated Learning, Confidential Computing, and Privacy-preserving Inference for Large Language Models (LLMs). She has served as a core member for several major national research projects, including the National Key R&D Program of China and the CAS Strategic Priority Research Program. His recent research findings have been published in top-tier computer conferences, including HPCA, IEEE S&P, and NDSS, as well as major journals like IEEE TPDS.
 
