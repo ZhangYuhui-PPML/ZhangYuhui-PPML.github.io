@@ -20,12 +20,15 @@ Research Interests
 
 Projects
 ======
-** Principal Investigator (PI) ** for two NSFC programs: the Youth Program and the Special Program for Macro-control.
-** Core contributor ** for two major national research initiatives: the National Key R&D Program of China and the CAS Strategic Priority Research Program. 
+**Principal Investigator (PI)** for two NSFC programs: the Youth Program and the Special Program for Macro-control.
+
+**Core contributor** for two major national research initiatives: the National Key R&D Program of China and the CAS Strategic Priority Research Program. 
 
 
 Activity and Services
 ------
 PACT Artifact Evaluation Committee, PACT 2023.
+
 TPC Member (TPC) for ICA3PP 2025.
+
 TPC Member (TPC) for ICPADS 2025.
