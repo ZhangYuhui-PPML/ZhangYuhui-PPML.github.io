@@ -20,14 +20,19 @@ Research Interests
 
 Selected Publications
 ======
-- [SwiftFL: Enabling Speculative Training for On-Device Federated Deep Learning](/publication/swiftfl) — EuroSys 2026. Introduces speculative execution to remove stragglers in device-heavy FL.
-- [CryptPEFT: Efficient and Private Neural Network Inference via Parameter-Efficient Fine-Tuning](/publication/cryptpeft) — NDSS 2026. Builds a lightweight secure PEFT pipeline for privacy-preserving LLM serving.
-- [ERW-Radar: An Adaptive Detection System against Evasive Ransomware](/publication/erw-radar) — NDSS 2025. Couples contextual behavior tracking with fine-grained payload analysis to surface stealthy attacks.
-- [SpecFL: An Efficient Speculative Federated Learning System for Tree-based Model Training](/publication/specfl) — IEEE HPCA 2024. Co-designs predictors and scheduling to accelerate tree-model FL without sacrificing accuracy.
-- [Comet: Accelerating Private Inference for Large Language Models by Predicting Activation Sparsity](/publication/comet-llm-private-inference) — IEEE S&P 2025. Predicts sparse activations to cut cryptographic overhead in privacy-preserving LLM inference.
-- [An Efficient Speculative Federated Tree Learning System With a Lightweight NN-Based Predictor](/publication/tpds-speculative-federated-tree) — IEEE TPDS 2025. Extends speculative updates to heterogeneous clients with a compact neural predictor.
+{% assign featured_publications = "swiftfl,cryptpeft,erw-radar,specfl,comet-llm-private-inference,tpds-speculative-federated-tree" | split: "," %}
 
-[Browse the full list →](/publications/)
+<div class="publications publications--featured">
+  <ul class="pub-list">
+    {% for slug in featured_publications %}
+      {% assign post = site.publications | where: "slug", slug | first %}
+      {% if post %}
+        {% include publication-item.html post=post %}
+      {% endif %}
+    {% endfor %}
+  </ul>
+  <div class="pub-more"><a href="/publications/">Browse the full list →</a></div>
+</div>
 
 Projects
 ======
