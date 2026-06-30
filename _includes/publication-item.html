@@ -1,7 +1,7 @@
 <li class="pub-item">
   <div class="pub-item__title">{{ post.title }}</div>
   {% if post.excerpt %}
-    <div class="pub-item__meta">{{ post.excerpt | markdownify | replace: '<p>', '' | replace: '</p>', '' | strip }}</div>
+    <div class="pub-item__meta">{{ post.excerpt | markdownify | replace: '<p>', '' | replace: '</p>', '' | replace: '<br />', '. ' | replace: '<br/>', '. ' | replace: '<br>', '. ' | strip }}</div>
   {% endif %}
   {% if post.paperurl or post.slidesurl or post.bibtexurl %}
     <div class="pub-item__links">
