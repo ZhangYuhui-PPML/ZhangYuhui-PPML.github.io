@@ -4,8 +4,8 @@ collection: publications
 category: conferences
 permalink: /publication/fuzzyhawk
 date: 2026-01-02
-venue: "Inscrypt 2025"
+venue: "Information Security and Cryptology (Inscrypt 2025), Lecture Notes in Computer Science"
 paperurl: "https://doi.org/10.1007/978-981-95-6209-1_20"
 excerpt: |
-  Lingbo Zhao, <strong>Yuhui Zhang</strong>, Rui Hou<br /><em>Inscrypt 2025</em>
+  Lingbo Zhao, <strong>Yuhui Zhang</strong><sup>*</sup>, Rui Hou<br /><em>Inscrypt 2025</em>
 ---

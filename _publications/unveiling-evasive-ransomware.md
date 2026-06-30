@@ -7,5 +7,5 @@ date: 2026-02-25
 venue: "Cybersecurity 2026"
 paperurl: "https://doi.org/10.1186/s42400-025-00428-8"
 excerpt: |
-  Lingbo Zhao, Shuquan Wang, <strong>Yuhui Zhang</strong>, Rui Hou<br /><em>Cybersecurity 2026</em>
+  Lingbo Zhao, Shuquan Wang, <strong>Yuhui Zhang</strong><sup>*</sup>, Rui Hou<br /><em>Cybersecurity 2026</em>
 ---
