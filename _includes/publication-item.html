@@ -1,13 +1,16 @@
 <li class="pub-item">
-  <div class="pub-item__title">{{ post.title }}</div>
+  {% assign paper_link = post.paperurl | default: post.link | default: post.url %}
+  <div class="pub-item__title">
+    {{ post.title }}
+    {% if paper_link %}
+      <a class="pub-item__paper" href="{{ paper_link }}"{% if paper_link contains 'http' %} target="_blank" rel="noopener"{% endif %}>Paper</a>
+    {% endif %}
+  </div>
   {% if post.excerpt %}
     <div class="pub-item__meta">{{ post.excerpt | markdownify | replace: '<p>', '' | replace: '</p>', '' | replace: '<br />', '. ' | replace: '<br/>', '. ' | replace: '<br>', '. ' | strip }}</div>
   {% endif %}
-  {% if post.paperurl or post.slidesurl or post.bibtexurl %}
+  {% if post.slidesurl or post.bibtexurl %}
     <div class="pub-item__links">
-      {% if post.paperurl %}
-        <a href="{{ post.paperurl }}" target="_blank" rel="noopener">Paper</a>
-      {% endif %}
       {% if post.slidesurl %}
         <a href="{{ post.slidesurl }}" target="_blank" rel="noopener">Slides</a>
       {% endif %}

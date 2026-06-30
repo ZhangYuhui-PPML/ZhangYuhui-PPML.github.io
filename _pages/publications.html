@@ -11,31 +11,31 @@ author_profile: true
 
 {% include base_path %}
 
-<div class="publications">
-  {% if site.publication_category %}
-    {% for category in site.publication_category %}
-      {% assign category_posts = site.publications | where: "category", category[0] | sort: "date" %}
-      {% if category_posts.size > 0 %}
-        <section class="pub-category">
-          <h3 class="pub-category__title">{{ category[1].title }}</h3>
+{% assign publications = site.publications | where_exp: "item", "item.published != false" | sort: "date" | reverse %}
+
+{% if publications.size > 0 %}
+  <div class="publications">
+    {% assign current_year = "" %}
+    {% for post in publications %}
+      {% assign year = post.date | date: "%Y" %}
+      {% if year != current_year %}
+        {% if current_year != "" %}
+            </ul>
+          </section>
+        {% endif %}
+        <section class="pub-year">
+          <h3 class="pub-year__title">{{ year }}</h3>
           <ul class="pub-list">
-            {% for post in category_posts reversed %}
-              {% include publication-item.html post=post %}
-            {% endfor %}
+        {% assign current_year = year %}
+      {% endif %}
+      {% include publication-item.html post=post %}
+      {% if forloop.last %}
           </ul>
         </section>
       {% endif %}
     {% endfor %}
-  {% else %}
-    <section class="pub-category">
-      <ul class="pub-list">
-        {% for post in site.publications reversed %}
-          {% include publication-item.html post=post %}
-        {% endfor %}
-      </ul>
-    </section>
-  {% endif %}
-</div>
+  </div>
+{% endif %}
 
 
 
