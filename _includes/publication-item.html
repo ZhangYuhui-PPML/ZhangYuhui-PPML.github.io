@@ -1,9 +1,10 @@
 <li class="pub-item">
   {% assign paper_link = post.paperurl | default: post.link | default: post.url %}
   <div class="pub-item__title">
-    {{ post.title }}
     {% if paper_link %}
-      <a class="pub-item__paper" href="{{ paper_link }}"{% if paper_link contains 'http' %} target="_blank" rel="noopener"{% endif %}>Paper</a>
+      <a href="{{ paper_link }}"{% if paper_link contains 'http' %} target="_blank" rel="noopener"{% endif %}>{{ post.title }}</a>
+    {% else %}
+      {{ post.title }}
     {% endif %}
   </div>
   {% if post.excerpt %}

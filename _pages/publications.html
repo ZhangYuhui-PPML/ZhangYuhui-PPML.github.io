@@ -15,25 +15,11 @@ author_profile: true
 
 {% if publications.size > 0 %}
   <div class="publications">
-    {% assign current_year = "" %}
-    {% for post in publications %}
-      {% assign year = post.date | date: "%Y" %}
-      {% if year != current_year %}
-        {% if current_year != "" %}
-            </ul>
-          </section>
-        {% endif %}
-        <section class="pub-year">
-          <h3 class="pub-year__title">{{ year }}</h3>
-          <ul class="pub-list">
-        {% assign current_year = year %}
-      {% endif %}
-      {% include publication-item.html post=post %}
-      {% if forloop.last %}
-          </ul>
-        </section>
-      {% endif %}
-    {% endfor %}
+    <ul class="pub-list">
+      {% for post in publications %}
+        {% include publication-item.html post=post %}
+      {% endfor %}
+    </ul>
   </div>
 {% endif %}
 
