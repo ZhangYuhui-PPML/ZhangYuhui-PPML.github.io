@@ -18,6 +18,14 @@ Research Interests
 - Confidential Computing
 - Ransomware attack detection
 
+Selected Publications
+======
+- [SwiftFL: Enabling Speculative Training for On-Device Federated Deep Learning](/publication/swiftfl) — EuroSys 2026. Introduces speculative execution to remove stragglers in device-heavy FL.
+- [CryptPEFT: Efficient and Private Neural Network Inference via Parameter-Efficient Fine-Tuning](/publication/cryptpeft) — NDSS 2026. Builds a lightweight secure PEFT pipeline for privacy-preserving LLM serving.
+- [ERW-Radar: An Adaptive Detection System against Evasive Ransomware](/publication/erw-radar) — NDSS 2025. Couples contextual behavior tracking with fine-grained payload analysis to surface stealthy attacks.
+
+[Browse the full list →](/publications/)
+
 Projects
 ======
 - **Principal Investigator (PI)** for two NSFC programs: the Youth Program and the Special Program for Macro-control.
