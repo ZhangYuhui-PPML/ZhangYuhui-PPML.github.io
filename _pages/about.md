@@ -20,15 +20,22 @@ Research Interests
 
 Selected Publications
 ======
-{% assign featured_publications = "swiftfl,cryptpeft,erw-radar,specfl,comet-llm-private-inference,tpds-speculative-federated-tree" | split: "," %}
+{% assign featured_slugs = "swiftfl,cryptpeft,erw-radar,specfl,comet-llm-private-inference,tpds-speculative-federated-tree" | split: "," %}
+{% assign featured_posts = '' | split: '' %}
+
+{% for slug in featured_slugs %}
+  {% assign post = site.publications | where: "slug", slug | first %}
+  {% if post %}
+    {% assign featured_posts = featured_posts | push: post %}
+  {% endif %}
+{% endfor %}
+
+{% assign featured_posts = featured_posts | sort: "date" | reverse %}
 
 <div class="publications publications--featured">
   <ul class="pub-list">
-    {% for slug in featured_publications %}
-      {% assign post = site.publications | where: "slug", slug | first %}
-      {% if post %}
-        {% include publication-item.html post=post %}
-      {% endif %}
+    {% for post in featured_posts %}
+      {% include publication-item.html post=post %}
     {% endfor %}
   </ul>
   <div class="pub-more"><a href="/publications/">Browse the full list →</a></div>
