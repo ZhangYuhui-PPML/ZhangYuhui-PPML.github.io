@@ -1,22 +1,5 @@
-{% assign paper_link = post.paperurl | default: post.link | default: post.url %}
 <li class="pub-item">
-  {% if post.date or post.venue %}
-    <div class="pub-item__header">
-      {% if post.date %}
-        <span class="pub-item__year">{{ post.date | date: "%Y" }}</span>
-      {% endif %}
-      {% if post.venue %}
-        <span class="pub-item__venue">{{ post.venue }}</span>
-      {% endif %}
-    </div>
-  {% endif %}
-  <div class="pub-item__title">
-    {% if paper_link %}
-      <a href="{{ paper_link }}"{% if paper_link contains 'http' %} target="_blank" rel="noopener"{% endif %}>{{ post.title }}</a>
-    {% else %}
-      {{ post.title }}
-    {% endif %}
-  </div>
+  <div class="pub-item__title">{{ post.title }}</div>
   {% if post.excerpt %}
     <div class="pub-item__meta">{{ post.excerpt | markdownify | replace: '<p>', '' | replace: '</p>', '' | strip }}</div>
   {% endif %}
