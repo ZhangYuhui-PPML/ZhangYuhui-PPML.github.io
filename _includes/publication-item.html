@@ -1,0 +1,36 @@
+{% assign paper_link = post.paperurl | default: post.link | default: post.url %}
+<li class="pub-item">
+  {% if post.date or post.venue %}
+    <div class="pub-item__header">
+      {% if post.date %}
+        <span class="pub-item__year">{{ post.date | date: "%Y" }}</span>
+      {% endif %}
+      {% if post.venue %}
+        <span class="pub-item__venue">{{ post.venue }}</span>
+      {% endif %}
+    </div>
+  {% endif %}
+  <div class="pub-item__title">
+    {% if paper_link %}
+      <a href="{{ paper_link }}"{% if paper_link contains 'http' %} target="_blank" rel="noopener"{% endif %}>{{ post.title }}</a>
+    {% else %}
+      {{ post.title }}
+    {% endif %}
+  </div>
+  {% if post.excerpt %}
+    <div class="pub-item__meta">{{ post.excerpt | markdownify | replace: '<p>', '' | replace: '</p>', '' | strip }}</div>
+  {% endif %}
+  {% if post.paperurl or post.slidesurl or post.bibtexurl %}
+    <div class="pub-item__links">
+      {% if post.paperurl %}
+        <a href="{{ post.paperurl }}" target="_blank" rel="noopener">Paper</a>
+      {% endif %}
+      {% if post.slidesurl %}
+        <a href="{{ post.slidesurl }}" target="_blank" rel="noopener">Slides</a>
+      {% endif %}
+      {% if post.bibtexurl %}
+        <a href="{{ post.bibtexurl }}" target="_blank" rel="noopener">BibTeX</a>
+      {% endif %}
+    </div>
+  {% endif %}
+</li>
